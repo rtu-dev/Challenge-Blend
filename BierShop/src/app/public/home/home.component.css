@@ -1,0 +1,17 @@
+@keyframes fa-blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+.fa-blink {
+  -webkit-animation: fa-blink .100s linear infinite;
+  -moz-animation: fa-blink .100s linear infinite;
+  -ms-animation: fa-blink .100s linear infinite;
+  -o-animation: fa-blink .100s linear infinite;
+  animation: fa-blink .100s linear infinite;
+}
+
+.borda {
+    border-radius: 350px;  
+    padding: 20px;
+  }

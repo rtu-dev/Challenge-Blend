@@ -1,0 +1,80 @@
+<!-- bg-white removed from nav -->
+<header>
+  <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3'>
+    <div class="container">
+      <a class="navbar-brand" [routerLink]='["/"]'>
+        <img src="./../../../assets/logo.png" class="img-fluid" style="max-width: 60%">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-label="Toggle navigation" [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse d-sm-inline-flex  " [ngClass]='{"show": isExpanded}'>
+        <ul class="navbar-nav flex-grow" *ngIf="!showMenu; else other2">
+          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <a class="nav-link text-dark" [routerLink]='["/Sobre"]'>
+              <strong style="color: white"> Sobre</strong>
+            </a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <a class="nav-link text-dark" [routerLink]='["/Mercado"]'>
+              <strong style="color: white"> O mercado</strong>
+            </a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <a class="nav-link text-dark" [routerLink]='["/Especiais"]'>
+              <strong style="color: white"> Especiais</strong>
+            </a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <a class="nav-link text-dark" [routerLink]='["/Curiosidades"]'>
+              <strong style="color: white"> Curiosidades</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]='{"show": isExpanded}'>
+          <ul class="navbar-nav flex-grow" *ngIf="!showMenu; else other">          
+            <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a class="nav-link text-dark" [routerLink]='["/login"]'>
+                <i class="fa fa-user" style="color: white"></i>
+                <strong style="color: white"> Login</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      <ng-template #other>
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <a class="nav-link text-dark" >
+              <i class="fa fa-user" style="color: white"></i>
+              <strong style="color: white" (click)="logOut()"> Sair</strong>
+            </a>
+          </li>
+        </ul>
+      </ng-template>
+
+      <ng-template #other2>
+          <ul class="navbar-nav flex-grow">
+              <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+                  <a class="nav-link text-dark" [routerLink]='["/private/Dashboard"]'>
+                    <strong style="color: white"> Dashboard</strong>
+                  </a>
+                </li>
+                <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+                  <a class="nav-link text-dark" [routerLink]='["/private/Bier"]'>
+                    <strong style="color: white"> Produtos</strong>
+                  </a>
+                </li>
+          </ul>
+        </ng-template>
+
+
+
+    </div>
+  </nav>
+</header>

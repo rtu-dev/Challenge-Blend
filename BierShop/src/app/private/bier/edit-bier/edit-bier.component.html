@@ -1,0 +1,59 @@
+<form method="post" [formGroup]="rForm" (ngSubmit)="onSubmit()" role="form">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <label for="name">Editar cerveja</label>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-6">
+            <img src="{{ urlImg + path }}" alt="image thumbnail" class="img-thumbnail" *ngIf="path != null; else other"
+              style="max-width: 150px">
+            <ng-template #other>
+              <img src="./../../../../assets/fundo.png" style="max-width: 150px">
+            </ng-template>
+          </div>
+          <div class="col">
+            <label for="name">Imagem cerveja</label><br>
+            <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+            <button type="button" class="btn btn-outline-secondary" (click)="file.click()">Upload de arquivo</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Nome">
+      </div>
+
+      <div class="form-group">
+          <label for="group">Grupo</label>
+        <select class="custom-select" (change)="changeGroup($event)" formControlName="group">
+          <option value="">Selecione o grupo</option>
+          <option *ngFor="let item of group" [value]="item.groupName">{{ item.groupName }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Preço</label>
+        <input type="number" class="form-control" formControlName="price" placeholder="Preço">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Descrição</label>
+        <textarea type="text" class="form-control" formControlName="description" placeholder="Descrição"></textarea>
+      </div>
+
+      <div class="row justify-content-between">
+        <button type="button" class="btn btn-secondary col-5" (click)="backClicked()">Voltar</button>
+        <button type="submit" class="btn btn-primary col-5 " [disabled]="!rForm.valid">Alterar</button>
+      </div>
+
+
+
+    </div>
+  </div>
+</form>

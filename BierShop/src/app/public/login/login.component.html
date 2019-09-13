@@ -1,0 +1,46 @@
+<div class="row" style="margin-top:5%;">
+    <div class="col">
+        <h2>Login</h2>
+        <br />
+        <form method="post" class="form-signin" [formGroup]="rForm" (ngSubmit)="login()">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="Email" class="form-control form-control-lg" placeholder="E-mail"
+                            formControlName="email" />
+                        <span type="Email" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="Password" class="form-control form-control-lg" placeholder="Password"
+                            formControlName="password" />
+                        <span type="Password" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- error -->
+            <div *ngIf="error" class="text-center">
+                <p class="text-danger">senha ou e-mail invalidos</p>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <input type="submit" class="btn btn-lg btn-primary form-control" value="Entrar" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <div class="col" >
+            <div class="text-center">
+                <img src="./../../../assets/loginCapa.jpg" class="img-fluid"  alt="Bier-home" style="max-width: 80%">
+            </div>
+        </div>
+    </div>
+</div>

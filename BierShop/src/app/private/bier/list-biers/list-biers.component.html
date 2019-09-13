@@ -1,0 +1,73 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      <strong style="color: blue">
+        Lista de cervejas
+      </strong>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 3%">
+    <div class="col-3">
+      <a routerLink="CreateBier">
+        <button type="button" class="btn btn-primary" style="width: 100%">Nova cerveja</button> 
+      </a>
+    </div>
+    <div class="col">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-primary" type="button" id="button-addon1">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+        <input [(ngModel)]="part" (keyup)="keyUp($event)" type="text" class="form-control" placeholder="parte do nome"
+          aria-label="Example text with button addon" aria-describedby="button-addon1">
+      </div>
+    </div>
+  </div>
+
+  <div class="row align-items-start cardBorder" style=" margin-top: 1%;" *ngFor="let item of listaBier">
+    <div class="col-2">
+      <div class="text-center">
+        <img src="{{ urlimg + item.imgPath }}" style="width: 130px; height: 130px;">
+      </div>
+    </div>
+    <div class="col-2 ">
+      <div style="word-wrap: break-word; overflow-y: auto; max-height: 130px">
+          <strong style="color: blue">
+              {{ item.name }}
+            </strong>
+      </div>    
+    </div>
+    <div class="col-1">
+      R$ {{ item.price }}
+    </div>
+    <div class="col-2">
+      {{ item.group }}
+    </div>
+    <div class="col-3" style="word-wrap: break-word; overflow-y: auto; max-height: 130px; color: lightslategray;">
+      <!-- <div class="badge badge-primary text-wrap" style="width: 6rem;"> -->
+      {{ item.description }}
+      <!-- </div> -->
+    </div>
+    <div class="col-2 text-right">
+      <div class="row">
+        <div class="col">
+          <a [routerLink]="['EditBier', item.bierId]">
+            <i class="fa fa-pencil " style="color: blue; margin-right: 5%"></i>
+          </a>
+          <a (click)="remove(item.bierId)">
+            <i class="fa fa-trash" style="color: crimson" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-success" style="font-size: smaller; margin-top: 10%">Fazer nova
+            simulação</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
