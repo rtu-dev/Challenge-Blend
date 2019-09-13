@@ -2,7 +2,7 @@
 
 Passos para rodar o projeto em sua máquina.
 
-API [ Asp.Net Core ].
+API [ Asp.Net Core + EF Core + MS SQL Server].
 1. clone o repositório e abra a solution que esta em "\Challenge-Blend\BierShop Back-End\BlendBierShop".
 
 2. com a solution aberta va até o Package manager e de o comando update-database para aplicar as migraions padrao.
