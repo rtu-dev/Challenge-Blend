@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Infra\Services\" />
-    <Folder Include="Resources\Images\" />
   </ItemGroup>
 
 </Project>
