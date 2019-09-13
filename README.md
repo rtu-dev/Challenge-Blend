@@ -11,7 +11,7 @@ API [ Asp.Net Core ].
 
 4. feito isso dê um PLAY na API!
 
-Client.[ Angular ]
+Client [ Angular ].
 1. vá até a pasta "Challenge-Blend\BierShop\src" e dê o comanda "npm install" para instalar as dependencias do projeto.
 
 2. após instalar todas as dependencias dê o comandando "ng serve" e o projeto está pronto!
