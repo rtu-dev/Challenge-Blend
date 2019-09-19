@@ -113,32 +113,5 @@ namespace BlendBierShop.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-
-        [Route("removeImage")]
-        [HttpPost, DisableRequestSizeLimit]
-        public IActionResult RemoveUpload([FromQuery] string filenam)
-        {
-            try
-            {
-                var file = Request.Form.Files[0];
-                var folderName = Path.Combine("Resources", "Images");
-                var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                var dbPath = Path.Combine(folderName, fileName);
-
-                if (System.IO.File.Exists(dbPath))
-                {
-                    System.IO.File.Delete(dbPath);
-                    return Ok();
-                }
-                else
-                {
-                    return BadRequest();
-                }
-            }
-            catch (Exception)
-            {
-                return StatusCode(500, "Internal server error");
-            }
-        }
     }
 }
