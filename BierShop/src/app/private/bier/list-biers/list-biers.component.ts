@@ -10,7 +10,14 @@ import { environment } from 'src/environments/environment';
 })
 export class ListBiersComponent implements OnInit {
   urlimg = `${environment.ApiConfig.urlRootImg}`;
-  listaBier: Bier[] = [];
+
+  b1: Bier = new Bier;
+  b2: Bier = new Bier;
+  b3: Bier = new Bier;
+  
+
+  listaBier: Bier[] = [this.b1, this.b2, this.b3];
+
   listaKeyUp: Bier[] = [];
   part: string;
 

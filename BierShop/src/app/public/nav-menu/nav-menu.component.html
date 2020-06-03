@@ -1,9 +1,9 @@
 <!-- bg-white removed from nav -->
 <header>
-  <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3'>
+  <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-success border-bottom box-shadow mb-3'>
     <div class="container">
       <a class="navbar-brand" [routerLink]='["/"]'>
-        <img src="./../../../assets/logo.png" class="img-fluid" style="max-width: 60%">
+        <img src="./../../../assets/bb.png" class="img-fluid" style="max-width: 30px">
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
@@ -18,7 +18,7 @@
               <strong style="color: white"> Sobre</strong>
             </a>
           </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+          <!-- <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
             <a class="nav-link text-dark" [routerLink]='["/Mercado"]'>
               <strong style="color: white"> O mercado</strong>
             </a>
@@ -32,7 +32,7 @@
             <a class="nav-link text-dark" [routerLink]='["/Curiosidades"]'>
               <strong style="color: white"> Curiosidades</strong>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -67,7 +67,12 @@
                 </li>
                 <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
                   <a class="nav-link text-dark" [routerLink]='["/private/Bier"]'>
-                    <strong style="color: white"> Produtos</strong>
+                    <strong style="color: white"> Quadras</strong>
+                  </a>
+                </li>
+                <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+                  <a class="nav-link text-dark" [routerLink]='["/private/Bier"]'>
+                    <strong style="color: white"> Campeonatos</strong>
                   </a>
                 </li>
           </ul>

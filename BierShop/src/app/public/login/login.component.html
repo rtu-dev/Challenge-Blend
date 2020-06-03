@@ -1,5 +1,10 @@
 <div class="row" style="margin-top:5%;">
-    <div class="col">
+    <div class="col-md-12">
+        <div class="text-center">
+            <img src="./../../../assets/bb.png" class="img-fluid" alt="Bier-home" style="max-width: 20%">
+        </div>
+    </div>
+    <div class="offset-md-3 col-md-6">
         <h2>Login</h2>
         <br />
         <form method="post" class="form-signin" [formGroup]="rForm" (ngSubmit)="login()">
@@ -30,17 +35,16 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <input type="submit" class="btn btn-lg btn-primary form-control" value="Entrar" />
+                        <input type="submit" class="btn btn-lg btn-success form-control" value="Entrar" />
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
-    <div>
-        <div class="col" >
-            <div class="text-center">
-                <img src="./../../../assets/loginCapa.jpg" class="img-fluid"  alt="Bier-home" style="max-width: 80%">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <input routerLink="/cadastro" type="button" class="btn btn-lg btn-outline-success form-control"
+                        value="Cadastra-se" />
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>

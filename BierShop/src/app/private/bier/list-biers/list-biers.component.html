@@ -2,8 +2,8 @@
 
   <div class="row">
     <div class="col">
-      <strong style="color: blue">
-        Lista de cervejas
+      <strong style="color: green">
+        Listagem de quadras
       </strong>
     </div>
   </div>
@@ -11,17 +11,17 @@
   <div class="row" style="margin-top: 3%">
     <div class="col-3">
       <a routerLink="CreateBier">
-        <button type="button" class="btn btn-primary" style="width: 100%">Nova cerveja</button> 
+        <button type="button" class="btn btn-success" style="width: 100%">Cadastrar nova quadra</button> 
       </a>
     </div>
     <div class="col">
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <button class="btn btn-primary" type="button" id="button-addon1">
+          <button class="btn btn-success" type="button" id="button-addon1">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </div>
-        <input [(ngModel)]="part" (keyup)="keyUp($event)" type="text" class="form-control" placeholder="parte do nome"
+        <input [(ngModel)]="part" (keyup)="keyUp($event)" type="text" class="form-control" placeholder="pesquisar quadra por nome"
           aria-label="Example text with button addon" aria-describedby="button-addon1">
       </div>
     </div>

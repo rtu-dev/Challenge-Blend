@@ -5,6 +5,7 @@ import { PublicRoutingModule } from './public-routing.module';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   declarations: [
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    CadastroComponent
   ]
 })
 export class PublicModule { }

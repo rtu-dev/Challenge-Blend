@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="col">
+    <div class="offset-md-2 col-md-8">
+      <h2>Cadastre sua empresa aqui</h2>
+      <br />
+    </div>
+    <form method="post" class="form-signin" [formGroup]="rForm" (ngSubmit)="cadastrar()">
+      <div class="form-group">
+        <div class="row">
+          <div class="offset-md-2 col-md-8">
+            <input type="" class="form-control form-control-lg" placeholder="Nome da sua empresa"
+              formControlName="nome" />
+            <span type="" class="text-danger"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class=" offset-md-2 col-md-8">
+            <input type="" class="form-control form-control-lg" placeholder="CNPJ" formControlName="CNPJ" />
+            <span type="" class="text-danger"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class=" offset-md-2 col-md-8">
+            <input type="" class="form-control form-control-lg" placeholder="CEP" formControlName="CEP" />
+            <span type="" class="text-danger"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class=" offset-md-2 col-md-8">
+            <input type="" class="form-control form-control-lg" placeholder="Rua" formControlName="rua" />
+            <span type="" class="text-danger"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class=" offset-md-2 col-md-8">
+            <input type="" class="form-control form-control-lg" placeholder="Bairro" formControlName="bairro" />
+            <span type="" class="text-danger"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class=" offset-md-2 col-md-8">
+            <input type="" class="form-control form-control-lg" placeholder="Numero" formControlName="numero" />
+            <span type="" class="text-danger"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class=" offset-md-2 col-md-8">
+            <input type="" class="form-control form-control-lg" placeholder="Cidade" formControlName="cidade" />
+            <span type="" class="text-danger"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class=" offset-md-2 col-md-8">
+            <input type="Email" class="form-control form-control-lg" placeholder="E-mail" formControlName="email" />
+            <span type="Email" class="text-danger"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+            <div class="offset-md-2 col-md-4">
+                <input routerLink="/" type="button" class="btn btn-lg btn-outline-danger form-control" value="Cancelar" />
+            </div>
+            <div class="col-md-4">
+              <input type="submit" class="btn btn-lg btn-success form-control" value="Cadastrar" />
+          </div>
+        </div>
+    </div>
+    </form>
+  </div>
+</div>
